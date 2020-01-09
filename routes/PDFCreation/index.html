@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+
+    <link rel="stylesheet" href="https://essensbestellung.herokuapp.com/assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://essensbestellung.herokuapp.com/assets/css/styles.css">
+</head>
+
+<body>
+<div class="container-fluid header">
+    <div class="row">
+        <div class="col text-right textHead">
+            <p>{{Vorname}} {{Nachname}}</p>
+            <p>Dein Plan für die KW {{KW}}</p>
+        </div>
+        <div class="col"><img id="logoHead" src="https://essensbestellung.herokuapp.com/assets/img/logo.svg" alt="Bild">
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col">
+            <table class="table table-bordered">
+                <thead>
+                <tr class="text-center">
+                    <th>Montag</th>
+                    <th>Dienstag</th>
+                    <th>Mittwoch</th>
+                    <th>Donnerstag</th>
+                    <th>Freitag</th>
+                </tr>
+                </thead>
+                <tbody class="text-center">
+                <tr class="text-center">
+                    <td>
+                        <div class="container-fluid tableData">
+                            <div class="row">
+                                {{#if MoName}}
+                                <div class="col d-flex justify-content-center headerTD">
+                                        <span class="text-center">
+                                            {{MoName}}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr/>
+                                    <ul class="list-unstyled">
+                                        <li>Kcal: {{MoKcal}}kcal</li>
+                                        <li>Salz: {{MoSalz}}g</li>
+                                        <li>Kohlenhydrate: {{MoKohlenHydrate}}g</li>
+                                        <li>Eiweiß: {{MoEiweiss}}g</li>
+                                        <li>Fett: {{MoFett}}g</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="container-fluid tableData">
+                            <div class="row text-center">
+                                {{#if DiName}}
+                                <div class="col d-flex justify-content-center headerTD">
+                                    <span class="text-center">{{DiName}}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr/>
+                                    <ul class="list-unstyled">
+                                        <li>Kcal: {{DiKcal}}kcal</li>
+                                        <li>Salz: {{DiSalz}}g</li>
+                                        <li>Kohlenhydrate: {{DiKohlenHydrate}}g</li>
+                                        <li>Eiweiß: {{DiEiweiss}}g</li>
+                                        <li>Fett: {{DiFett}}g</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="container-fluid tableData">
+                            <div class="row text-center">
+                                {{#if MiName}}
+                                <div class="col d-flex justify-content-center headerTD">
+                                    <span class="text-center">{{MiName}}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr/>
+                                    <ul class="list-unstyled">
+                                        <li>Kcal: {{MiKcal}}kcal</li>
+                                        <li>Salz: {{MiSalz}}g</li>
+                                        <li>Kohlenhydrate: {{MiKohlenHydrate}}g</li>
+                                        <li>Eiweiß: {{MiEiweiss}}g</li>
+                                        <li>Fett: {{MiFett}}g</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="container-fluid tableData">
+                            <div class="row text-center">
+                                {{#if DoName}}
+                                <div class="col d-flex justify-content-center headerTD">
+                                    <span class="text-center">{{DoName}}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr/>
+                                    <ul class="list-unstyled">
+                                        <li>Kcal: {{DoKcal}}kcal</li>
+                                        <li>Salz: {{DoSalz}}g</li>
+                                        <li>Kohlenhydrate: {{DoKohlenHydrate}}g</li>
+                                        <li>Eiweiß: {{DoEiweiss}}g</li>
+                                        <li>Fett: {{DoFett}}g</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="container-fluid tableData">
+                            <div class="row text-center">
+                                {{#if FrName}}
+                                <div class="col d-flex justify-content-center headerTD">
+                                    <span class="text-center">{{FrName}}</span>
+                                    <hr/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr/>
+                                    <ul class="list-unstyled">
+                                        <li>Kcal: {{FrKcal}}g</li>
+                                        <li>Salz: {{FrSalz}}g</li>
+                                        <li>Kohlenhydrate: {{FrKohlenHydrate}}g</li>
+                                        <li>Eiweiß: {{FrEiweiss}}g</li>
+                                        <li>Fett: {{FrFett}}g</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="container tableData">
+                            <div class="row text-center">
+                                {{#if MoDesName}}
+                                <div class="col d-flex justify-content-center headerTD">
+                                    <span class="text-center">{{MoDesName}}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr/>
+                                    <ul class="list-unstyled">
+                                        <li>Kcal: {{MoDesKcal}}kcal</li>
+                                        <li>Salz: {{MoDesSalz}}g</li>
+                                        <li>Kohlenhydrate: {{MoDesKohlenHydrate}}g</li>
+                                        <li>Eiweiß: {{MoDesEiweiss}}g</li>
+                                        <li>Fett: {{MoDesFett}}g</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="container tableData">
+                            <div class="row text-center">
+                                {{#if DiDesName}}
+                                <div class="col d-flex justify-content-center headerTD">
+                                    <span class="text-center">{{DiDesName}}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr/>
+                                    <ul class="list-unstyled">
+                                        <li>Kcal: {{DiDesKcal}}g</li>
+                                        <li>Salz: {{DiDesSalz}}g</li>
+                                        <li>Kohlenhydrate: {{DiDesKohlenHydrate}}g</li>
+                                        <li>Eiweiß: {{DiDesEiweiss}}g</li>
+                                        <li>Fett: {{DiDesSalz}}g</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="container tableData">
+                            <div class="row text-center">
+                                {{#if MiDesName}}
+                                <div class="col d-flex justify-content-center headerTD">
+                                    <span class="text-center">{{MiDesName}}<br/></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr/>
+                                    <ul class="list-unstyled">
+                                        <li>Kcal: {{MiDesKcal}}kcal</li>
+                                        <li>Salz: {{MiDesSalz}}g</li>
+                                        <li>Kohlenhydrate: {{MiDesKohlenHydrate}}g</li>
+                                        <li>Eiweiß: {{MiDesEiweiss}}g</li>
+                                        <li>Fett: {{MiDesFett}}g</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="container tableData">
+                            <div class="row text-center">
+                                {{#if DoDesName}}
+                                <div class="col d-flex justify-content-center headerTD">
+                                    <span class="text-center">{{DoDesName}}<br/></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr/>
+                                    <ul class="list-unstyled">
+                                        <li>Kcal: {{DoDesKcal}}g</li>
+                                        <li>Salz: {{DoDesSalz}}g</li>
+                                        <li>Kohlenhydrate: {{DoDesKohlenHydrate}}g</li>
+                                        <li>Eiweiß: {{DoDesEiweiss}}g</li>
+                                        <li>Fett: {{DoDesFett}}g</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </td>
+                    <td>
+                        <div class="container tableData">
+                            <div class="row text-center">
+                                {{#if FrDesName}}
+                                <div class="col d-flex justify-content-center headerTD">
+                                    <span class="text-center">{{FrDesName}}</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <hr/>
+                                    <ul class="list-unstyled">
+                                        <li>Kcal: {{FrDesKcal}}kcal</li>
+                                        <li>Salz: {{FrDesSalz}}g</li>
+                                        <li>Kohlenhydrate: {{FrDesKohlenHydrate}}g</li>
+                                        <li>Eiweiß: {{FrDesEiweiss}}g</li>
+                                        <li>Fett: {{FrDesFett}}g</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            {{/if}}
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://essensbestellung.herokuapp.com/assets/js/jquery.min.js"></script>
+<script src="https://essensbestellung.herokuapp.com/assets/bootstrap/js/bootstrap.min.js"></script>
+
+
+</body>
+
+</html>

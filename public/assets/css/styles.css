@@ -1,0 +1,44 @@
+.col.textHead {
+    color: rgb(0, 0, 0);
+}
+
+.header {
+    margin-top: 15px;
+}
+
+tr {
+    max-width: 150px !important;
+}
+
+
+#logoHead {
+    width: 334px;
+    height: 68px;
+    margin-right: 0px;
+    margin-left: 209px;
+}
+
+.container.header {
+    margin-top: 10px;
+}
+
+
+.tableHead {
+    height: 50%;
+    width: auto;
+}
+
+
+.col.headerTD {
+    width: 80%;
+    margin-bottom: 11px;
+}
+
+.table-responsive.table-bordered {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+
