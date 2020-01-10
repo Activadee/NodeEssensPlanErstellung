@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nodemon ./bin/www"
   },
-  "dependencies": {
+"dependencies": {
+  "clean-css": ">=4.1.11",
     "@hapi/joi": "^16.1.7",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "~1.4.4",
